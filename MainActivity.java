@@ -348,7 +348,7 @@ class Main {
         tires_output_handling = tires_handling_5;
         tires_output_rank = tires_5_rank;
         break;
-      default;
+      default:
         tires_output_speed = 0d;
         tires_output_handling = 0d;
         tires_output_rank = 0;
