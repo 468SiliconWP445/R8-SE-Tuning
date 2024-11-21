@@ -30,6 +30,19 @@ class Main {
     double exhaust_nitro_1, exhaust_nitro_2, exhaust_nitro_3, exhaust_nitro_4, exhaust_nitro_5;
     double exhaust_accel_1, exhaust_accel_2, exhaust_accel_3, exhaust_accel_4, exhaust_accel_5;
 
+    int acceleration_1_rank, acceleration_2_rank, acceleration_3_rank, acceleration_4_rank, acceleration_5_rank;
+    int top_speed_1_rank, top_speed_2_rank, top_speed_3_rank, top_speed_4_rank, top_speed_5_rank;
+    int handling_1_rank, handling_2_rank, handling_3_rank, handling_4_rank, handling_5_rank;
+    int nitro_1_rank, nitro_2_rank, nitro_3_rank, nitro_4_rank, nitro_5_rank;
+    int tires_speed_1_rank, tires_speed_2_rank, tires_speed_3_rank, tires_speed_4_rank, tires_speed_5_rank;
+    int tires_handling_1_rank, tires_handling_2_rank, tires_handling_3_rank, tires_handling_4_rank, tires_handling_5_rank;
+    int suspension_nitro_1_rank, suspension_nitro_2_rank, suspension_nitro_3_rank, suspension_nitro_4_rank, suspension_nitro_5_rank;
+    int suspension_handling_1_rank, suspension_handling_2_rank, suspension_handling_3_rank, suspension_handling_4_rank, suspension_handling_5_rank;
+    int drivetrain_speed_1_rank, drivetrain_speed_2_rank, drivetrain_speed_3_rank, drivetrain_speed_4_rank, drivetrain_speed_5_rank;
+    int drivetrain_accel_1_rank, drivetrain_accel_2_rank, drivetrain_accel_3_rank, drivetrain_accel_4_rank, drivetrain_accel_5_rank;
+    int exhaust_nitro_1_rank, exhaust_nitro_2_rank, exhaust_nitro_3_rank, exhaust_nitro_4_rank, exhaust_nitro_5_rank;
+    int exhaust_accel_1_rank, exhaust_accel_2_rank, exhaust_accel_3_rank, exhaust_accel_4_rank, exhaust_accel_5_rank;
+
     acceleration_1 = -0.17d; //3.92
     acceleration_2 = -0.39d; //3.70
     acceleration_3 = -0.67d; //3.42
@@ -77,3 +90,39 @@ class Main {
     suspension_handling_3 = 0.009d; //1.214
     suspension_handling_4 = 0.013d; //1.218
     suspension_handling_5 = 0.018d; //1.223
+
+    drivetrain_speed_1 = 5.4d; //216.6
+    drivetrain_speed_2 = 12.1d; //223.3
+    drivetrain_speed_3 = 20.2d; //231.4
+    drivetrain_speed_4 = 29.6d; //240.8
+    drivetrain_speed_5 = 40.4d; //251.6
+
+    drivetrain_accel_1 = -0.06d; //4.03
+    drivetrain_accel_2 = -0.12d; //3.97
+    drivetrain_accel_3 = -0.20d; //3.89
+    drivetrain_accel_4 = -0.30d; //3.79
+    drivetrain_accel_5 = -0.41d; //3.68
+
+    exhaust_nitro_1 = 0.6d; //29.2
+    exhaust_nitro_2 = 1.4d; //30.0
+    exhaust_nitro_3 = 2.4d; //31.0
+    exhaust_nitro_4 = 3.5d; //32.1
+    exhaust_nitro_5 = 4.8d; //33.4
+
+    exhaust_accel_1 = -0.06d; //4.03
+    exhaust_accel_2 = -0.12d; //3.97
+    exhaust_accel_3 = -0.20d; //3.89
+    exhaust_accel_4 = -0.30d; //3.79
+    exhaust_accel_5 = -0.41d; //3.68
+
+    acceleration_1_rank = 9; //468
+    acceleration_2_rank = 22; //481
+    acceleration_3_rank = 40; //499
+    acceleration_4_rank = 63; //522
+    acceleration_5_rank = 90; //549
+
+    top_speed_1_rank = 45; //504
+    top_speed_2_rank = 112; //571
+    top_speed_3_rank = 202; //661
+    top_speed_4_rank = 314; //773
+    top_speed_5_rank = 449; //908
