@@ -34,14 +34,23 @@ class Main {
     int top_speed_1_rank, top_speed_2_rank, top_speed_3_rank, top_speed_4_rank, top_speed_5_rank;
     int handling_1_rank, handling_2_rank, handling_3_rank, handling_4_rank, handling_5_rank;
     int nitro_1_rank, nitro_2_rank, nitro_3_rank, nitro_4_rank, nitro_5_rank;
-    int tires_speed_1_rank, tires_speed_2_rank, tires_speed_3_rank, tires_speed_4_rank, tires_speed_5_rank;
-    int tires_handling_1_rank, tires_handling_2_rank, tires_handling_3_rank, tires_handling_4_rank, tires_handling_5_rank;
-    int suspension_nitro_1_rank, suspension_nitro_2_rank, suspension_nitro_3_rank, suspension_nitro_4_rank, suspension_nitro_5_rank;
-    int suspension_handling_1_rank, suspension_handling_2_rank, suspension_handling_3_rank, suspension_handling_4_rank, suspension_handling_5_rank;
-    int drivetrain_speed_1_rank, drivetrain_speed_2_rank, drivetrain_speed_3_rank, drivetrain_speed_4_rank, drivetrain_speed_5_rank;
-    int drivetrain_accel_1_rank, drivetrain_accel_2_rank, drivetrain_accel_3_rank, drivetrain_accel_4_rank, drivetrain_accel_5_rank;
-    int exhaust_nitro_1_rank, exhaust_nitro_2_rank, exhaust_nitro_3_rank, exhaust_nitro_4_rank, exhaust_nitro_5_rank;
-    int exhaust_accel_1_rank, exhaust_accel_2_rank, exhaust_accel_3_rank, exhaust_accel_4_rank, exhaust_accel_5_rank;
+    int tires_1_rank, tires_2_rank, tires_3_rank, tires_rank, tires_5_rank;
+    int suspension_1_rank, suspension_2_rank, suspension_3_rank, suspension_4_rank, suspension_5_rank;
+    int drivetrain_1_rank, drivetrain_2_rank, drivetrain_3_rank, drivetrain_4_rank, drivetrain_5_rank;
+    int exhaust_1_rank, exhaust_2_rank, exhaust_3_rank, exhaust_4_rank, exhaust_5_rank;
+
+    int accel_level, speed_level, handling_level, nitro_level;
+    int tires_level, suspension_level, handling_level, exhaust_level;
+
+    double accel_output, speed_output, handling_output, nitro_output;
+    int accel_output_rank, speed_output_rank, handling_output_rank, nitro_output_rank;
+
+    double tires_output_speed, tires_output_handling;
+    double suspension_output_nitro, suspension_output_handling;
+    double drivetrain_output_speed, drivetrain_output_accel;
+    double exhaust_output_nitro, exhaust_output_accel;
+
+    int tires_output_rank, suspension_output_rank, drivetrain_output_rank, exhaust_output_rank;
 
     acceleration_1 = -0.17d; //3.92
     acceleration_2 = -0.39d; //3.70
@@ -126,3 +135,232 @@ class Main {
     top_speed_3_rank = 202; //661
     top_speed_4_rank = 314; //773
     top_speed_5_rank = 449; //908
+
+    handling_1_rank = 9; //468
+    handling_2_rank = 22; //481
+    handling_3_rank = 40; //499
+    handling_4_rank = 63; //522
+    handling_5_rank = 90; //549
+
+    nitro_1_rank = 27; //486
+    nitro_2_rank = 67; //526
+    nitro_3_rank = 121; //580
+    nitro_4_rank = 189; //648
+    nitro_5_rank = 269; //728
+
+    tires_1_rank = 14; //473
+    tires_2_rank = 30; //489
+    tires_3_rank = 51; //510
+    tires_4_rank = 74; //533
+    tires_5_rank = 101; //560
+
+    suspension_1_rank = 9; //468
+    suspension_2_rank = 20; //479
+    suspension_3_rank = 34; //493
+    suspension_4_rank = 50; //509
+    suspension_5_rank = 68; //527
+
+    drivetrain_1_rank = 14; //473
+    drivetrain_2_rank = 30; //489
+    drivetrain_3_rank = 51; //510
+    drivetrain_4_rank = 74; //533
+    drivetrain_5_rank = 101; //560
+
+    exhaust_1_rank = 9; //468
+    exhaust_2_rank = 20; //479
+    exhaust_3_rank = 34; //493
+    exhaust_4_rank = 50; //509
+    exhaust_5_rank = 68; //527
+
+    System.out.println("Enter the Acceleration Level");
+    accel_level = object.nextInt();
+    System.out.println("Enter the Top Speed Level");
+    speed_level = object.nextInt();
+    System.out.println("Enter the Handling Level");
+    handling_level = object.nextInt();
+    System.out.println("Enter the Nitro Level");
+    nitro_level = object.nextInt();
+    System.out.println("Enter the Tires Level");
+    tires_level = object.nextInt();
+    System.out.println("Enter the Suspension Level");
+    suspension_level = object.nextInt();
+    System.out.println("Enter the Drivetrain Level");
+    drivetrain_level = object.nextInt();
+    System.out.println("Enter the Exhaust Level");
+    exhaust_level = object.nextInt();
+
+    switch (accel_level) {
+      case 1:
+        accel_output = acceleration_1;
+        accel_output_rank = acceleration_1_rank;
+        break;
+      case 2:
+        accel_output = acceleration_2;
+        accel_output_rank = acceleration_2_rank;
+        break;
+      case 3:
+        accel_output = acceleration_3;
+        accel_output_rank = acceleration_3_rank;
+        break;
+      case 4:
+        accel_output = acceleration_4;
+        accel_output_rank = acceleration_4_rank;
+        break;
+      case 5:
+        accel_output = acceleration_5;
+        accel_output_rank = acceleration_5_rank;
+        break;
+    }
+
+    switch (speed_level) {
+      case 1:
+        speed_output = top_speed_1;
+        speed_output_rank = top_speed_1_rank;
+        break;
+      case 2:
+        speed_output = top_speed_2;
+        speed_output_rank = top_speed_2_rank;
+        break;
+      case 3:
+        speed_output = top_speed_3;
+        speed_output_rank = top_speed_3_rank;
+        break;
+      case 4:
+        speed_output = top_speed_4;
+        speed_output_rank = top_speed_4_rank;
+        break;
+      case 5:
+        speed_output = top_speed_5;
+        speed_output_rank = top_speed_5_rank;
+        break;
+    }
+
+    switch (handling_level) {
+      case 1:
+        handling_output = handling_1;
+        handling_output_rank = handling_1_rank;
+        break;
+      case 2:
+        handling_output = handling_2;
+        handling_output_rank = handling_2_rank;
+        break;
+      case 3:
+        handling_output = handling_3;
+        handling_output_rank = handling_3_rank;
+        break;
+      case 4:
+        handling_output = handling_4;
+        handling_output_rank = handling_4_rank;
+        break;
+      case 5:
+        handling_output = handling_5;
+        handling_output_rank = handling_5_rank;
+        break;
+    }
+
+    switch (nitro_level) {
+      case 1:
+        nitro_output = nitro_1;
+        nitro_output_rank = nitro_1_rank;
+        break;
+      case 2:
+        nitro_output = nitro_2;
+        nitro_output_rank = nitro_2_rank;
+        break;
+      case 3:
+        nitro_output = nitro_3;
+        nitro_output_rank = nitro_3_rank;
+        break;
+      case 4:
+        nitro_output = nitro_4;
+        nitro_output_rank = nitro_4_rank;
+        break;
+      case 5:
+        nitro_output = nitro_5;
+        nitro_output_rank = nitro_5_rank;
+        break;
+    }
+
+    switch (tires_level) {
+      case 1:
+        tires_output_speed = tires_speed_1;
+        tires_output_handling = tires_handling_1;
+        tires_output_rank = tires_1_rank;
+        break;
+      case 2:
+        tires_output_speed = tires_speed_2;
+        tires_output_handling = tires_handling_2;
+        tires_output_rank = tires_2_rank;
+        break;
+      case 3:
+        tires_output_speed = tires_speed_3;
+        tires_output_handling = tires_handling_3;
+        tires_output_rank = tires_3_rank;
+        break;
+      case 4:
+        tires_output_speed = tires_speed_4;
+        tires_output_handling = tires_handling_4;
+        tires_output_rank = tires_4_rank;
+        break;
+      case 5:
+        tires_output_speed = tires_speed_5;
+        tires_output_handling = tires_handling_5;
+        tires_output_rank = tires_5_rank;
+        break;
+    }
+
+    switch (suspension_level) {
+      case 1:
+        suspension_output_nitro = suspension_nitro_1;
+        suspension_output_handling = suspension_handling_1;
+        suspension_output_rank = suspension_1_rank;
+        break;
+      case 2:
+        suspension_output_nitro = suspension_nitro_2;
+        suspension_output_handling = suspension_handling_2;
+        suspension_output_rank = suspension_2_rank;
+        break;
+      case 3:
+        suspension_output_nitro = suspension_nitro_3;
+        suspension_output_handling = suspension_handling_3;
+        suspension_output_rank = suspension_3_rank;
+        break;
+      case 4:
+        suspension_output_nitro = suspension_nitro_4;
+        suspension_output_handling = suspension_handling_4;
+        suspension_output_rank = suspension_4_rank;
+        break;
+      case 5:
+        suspension_output_nitro = suspension_nitro_5;
+        suspension_output_handling = suspension_handling_5;
+        suspension_output_rank = suspension_5_rank;
+        break;
+    }
+
+    switch (drivetrain_level) {
+      case 1:
+        drivetrain_output_speed = drivetrain_speed_1;
+        drivetrain_output_accel = drivetrain_accel_1;
+        drivetrain_output_rank = drivetrain_1_rank;
+        break;
+      case 2:
+        drivetrain_output_speed = drivetrain_speed_2;
+        drivetrain_output_accel = drivetrain_accel_2;
+        drivetrain_output_rank = drivetrain_2_rank;
+        break;
+      case 3:
+        drivetrain_output_speed = drivetrain_speed_3;
+        drivetrain_output_accel = drivetrain_accel_3;
+        drivetrain_output_rank = drivetrain_3_rank;
+        break;
+      case 4:
+        drivetrain_output_speed = drivetrain_speed_4;
+        drivetrain_output_accel = drivetrain_accel_4;
+        drivetrain_output_rank = drivetrain_4_rank;
+        break;
+      case 5:
+        drivetrain_output_speed = drivetrain_speed_5;
+        drivetrain_output_accel = drivetrain_accel_5;
+        drivetrain_output_rank = drivetrain_5_rank;
+        break;
+    }
