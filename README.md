@@ -1,7 +1,29 @@
+# **R8 SE Tuning Calculator** 
+
 In a nutshell:
 
-This is a program written in Java (you will notice that it is not written very well) that basically simulates the upgrading of the Audi R8 e-tron Special Edition in Asphalt 8 prior to v4.1.
+A Java project designed to calculate the performance metrics of an R8 SE Tune. The program takes the upgrade levels of each component (acceleration, top speed, etc.) and outputs the acceleration, top speed, handling, nitro and rank of what the R8 SE would have been in pre-v4.1 Asphalt 8 (due to rounding errors some values can be 1 off (or 0.1 or 0.01 or 0.001; essentially the smallest unit of the statistic in question).
 
-Use of any trademarked names does not imply any endorsement from the trademark holder. 
+---
 
-The calculations are with a tuning kit applied as hardly anybody used the car without a tuning kit.
+## **Features**
+-  **Upgrade Selection**: Choose upgrade levels (0-5) for car components such as acceleration, speed, handling, nitro, tires, suspension, drivetrain, and exhaust.
+-  **Performance Calculation**: Calculates final metrics for:
+  - **Acceleration**
+  - **Speed**
+  - **Handling**
+  - **Nitro**
+  - **Overall Rank**
+
+---
+
+## **How It Works**
+1. **User Input**: The user selects upgrade levels for various upgrades (e.g. Top Speed) through a command-line interface.
+2. **Performance Metrics Calculation**: 
+   - The effect that each upgrade has on the relevant statistics (e.g. Tires upgrades speed and handling).
+3. **Output**: The stats for the tune are displayed to the user.
+
+---
+
+### **Requirements**
+- Java Development Kit (JDK) 8 or higher.
