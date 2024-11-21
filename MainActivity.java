@@ -35,7 +35,7 @@ class Main {
     int top_speed_1_rank, top_speed_2_rank, top_speed_3_rank, top_speed_4_rank, top_speed_5_rank;
     int handling_1_rank, handling_2_rank, handling_3_rank, handling_4_rank, handling_5_rank;
     int nitro_1_rank, nitro_2_rank, nitro_3_rank, nitro_4_rank, nitro_5_rank;
-    int tires_1_rank, tires_2_rank, tires_3_rank, tires_rank, tires_5_rank;
+    int tires_1_rank, tires_2_rank, tires_3_rank, tires_4_rank, tires_5_rank;
     int suspension_1_rank, suspension_2_rank, suspension_3_rank, suspension_4_rank, suspension_5_rank;
     int drivetrain_1_rank, drivetrain_2_rank, drivetrain_3_rank, drivetrain_4_rank, drivetrain_5_rank;
     int exhaust_1_rank, exhaust_2_rank, exhaust_3_rank, exhaust_4_rank, exhaust_5_rank;
