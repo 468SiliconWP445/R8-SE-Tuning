@@ -218,6 +218,10 @@ class Main {
         accel_output = acceleration_5;
         accel_output_rank = acceleration_5_rank;
         break;
+      default:
+        accel_output = 0d;
+        accel_output_rank = 0;
+        break;
     }
 
     switch (speed_level) {
@@ -244,6 +248,10 @@ class Main {
       case 5:
         speed_output = top_speed_5;
         speed_output_rank = top_speed_5_rank;
+        break;
+      default:
+        speed_output = 0d;
+        speed_output_rank = 0;
         break;
     }
 
@@ -272,6 +280,10 @@ class Main {
         handling_output = handling_5;
         handling_output_rank = handling_5_rank;
         break;
+      default:
+        handling_output = 0d;
+        handling_output_rank = 0;
+        break;
     }
 
     switch (nitro_level) {
@@ -298,6 +310,10 @@ class Main {
       case 5:
         nitro_output = nitro_5;
         nitro_output_rank = nitro_5_rank;
+        break;
+      default:
+        nitro_output = 0d;
+        nitro_output_rank = 0;
         break;
     }
 
@@ -332,6 +348,11 @@ class Main {
         tires_output_handling = tires_handling_5;
         tires_output_rank = tires_5_rank;
         break;
+      default;
+        tires_output_speed = 0d;
+        tires_output_handling = 0d;
+        tires_output_rank = 0;
+        break;
     }
 
     switch (suspension_level) {
@@ -364,6 +385,11 @@ class Main {
         suspension_output_nitro = suspension_nitro_5;
         suspension_output_handling = suspension_handling_5;
         suspension_output_rank = suspension_5_rank;
+        break;
+      default:
+        suspension_output_nitro = 0d;
+        suspension_output_handling = 0d;
+        suspension_output_rank = 0;
         break;
     }
 
@@ -398,6 +424,11 @@ class Main {
         drivetrain_output_accel = drivetrain_accel_5;
         drivetrain_output_rank = drivetrain_5_rank;
         break;
+      default:
+        drivetrain_output_speed = 0d;
+        drivetrain_output_accel = 0d;
+        drivetrain_output_rank = 0;
+        break;
     }
 
     switch (exhaust_level) {
@@ -430,6 +461,11 @@ class Main {
         exhaust_output_nitro = exhaust_nitro_5;
         exhaust_output_accel = exhaust_accel_5;
         exhaust_output_rank = exhaust_5_rank;
+        break;
+      default:
+        exhaust_output_nitro = 0d;
+        exhaust_output_accel = 0d;
+        exhaust_output_rank = 0;
         break;
     }
 
