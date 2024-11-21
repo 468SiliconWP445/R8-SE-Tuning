@@ -41,7 +41,7 @@ class Main {
     int exhaust_1_rank, exhaust_2_rank, exhaust_3_rank, exhaust_4_rank, exhaust_5_rank;
 
     int accel_level, speed_level, handling_level, nitro_level;
-    int tires_level, suspension_level, handling_level, exhaust_level;
+    int tires_level, suspension_level, drivetrain_level, exhaust_level;
 
     double accel_output, speed_output, handling_output, nitro_output;
     int accel_output_rank, speed_output_rank, handling_output_rank, nitro_output_rank;
