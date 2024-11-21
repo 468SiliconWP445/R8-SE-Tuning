@@ -8,12 +8,13 @@ class Main {
     
     Scanner object = new Scanner(System.in);
     
-    double acceleration_stock, top_speed_stock, handling_stock, nitro_stock, rank_stock;
+    double acceleration_stock, top_speed_stock, handling_stock, nitro_stock;
+    int rank_stock;
     acceleration_stock = 4.09d;
     top_speed_stock = 211.2d;
     handling_stock = 1.205d;
     nitro_stock = 28.6d;
-    rank_stock = 459d;
+    rank_stock = 459;
     
     //Levels below are cumulative
     
@@ -51,6 +52,9 @@ class Main {
     double exhaust_output_nitro, exhaust_output_accel;
 
     int tires_output_rank, suspension_output_rank, drivetrain_output_rank, exhaust_output_rank;
+
+    double total_accel, total_speed, total_handling, total_nitro;
+    int total_rank;
 
     acceleration_1 = -0.17d; //3.92
     acceleration_2 = -0.39d; //3.70
@@ -190,6 +194,10 @@ class Main {
     exhaust_level = object.nextInt();
 
     switch (accel_level) {
+      case 0:
+        accel_output = 0d;
+        accel_output_rank = 0;
+        break;
       case 1:
         accel_output = acceleration_1;
         accel_output_rank = acceleration_1_rank;
@@ -213,6 +221,10 @@ class Main {
     }
 
     switch (speed_level) {
+      case 0:
+        speed_output = 0d;
+        speed_output_rank = 0;
+        break;
       case 1:
         speed_output = top_speed_1;
         speed_output_rank = top_speed_1_rank;
@@ -236,6 +248,10 @@ class Main {
     }
 
     switch (handling_level) {
+      case 0:
+        handling_output = 0d;
+        handling_output_rank = 0;
+        break;
       case 1:
         handling_output = handling_1;
         handling_output_rank = handling_1_rank;
@@ -259,6 +275,10 @@ class Main {
     }
 
     switch (nitro_level) {
+      case 0:
+        nitro_output = 0d;
+        nitro_output_rank = 0;
+        break;
       case 1:
         nitro_output = nitro_1;
         nitro_output_rank = nitro_1_rank;
@@ -282,6 +302,11 @@ class Main {
     }
 
     switch (tires_level) {
+      case 0:
+        tires_output_speed = 0d;
+        tires_output_handling = 0d;
+        tires_output_rank = 0;
+        break;
       case 1:
         tires_output_speed = tires_speed_1;
         tires_output_handling = tires_handling_1;
@@ -310,6 +335,11 @@ class Main {
     }
 
     switch (suspension_level) {
+      case 0:
+        suspension_output_nitro = 0d;
+        suspension_output_handling = 0d;
+        suspension_output_rank = 0;
+        break;
       case 1:
         suspension_output_nitro = suspension_nitro_1;
         suspension_output_handling = suspension_handling_1;
@@ -338,6 +368,11 @@ class Main {
     }
 
     switch (drivetrain_level) {
+      case 0:
+        drivetrain_output_speed = 0d;
+        drivetrain_output_accel = 0d;
+        drivetrain_output_rank = 0;
+        break;
       case 1:
         drivetrain_output_speed = drivetrain_speed_1;
         drivetrain_output_accel = drivetrain_accel_1;
@@ -364,3 +399,46 @@ class Main {
         drivetrain_output_rank = drivetrain_5_rank;
         break;
     }
+
+    switch (exhaust_level) {
+      case 0:
+        exhaust_output_nitro = 0d;
+        exhaust_output_accel = 0d;
+        exhaust_output_rank = 0;
+        break;
+      case 1:
+        exhaust_output_nitro = exhaust_nitro_1;
+        exhaust_output_accel = exhaust_accel_1;
+        exhaust_output_rank = exhaust_1_rank;
+        break;
+      case 2:
+        exhaust_output_nitro = exhaust_nitro_2;
+        exhaust_output_accel = exhaust_accel_2;
+        exhaust_output_rank = exhaust_2_rank;
+        break;
+      case 3:
+        exhaust_output_nitro = exhaust_nitro_3;
+        exhaust_output_accel = exhaust_accel_3;
+        exhaust_output_rank = exhaust_3_rank;
+        break;
+      case 4:
+        exhaust_output_nitro = exhaust_nitro_4;
+        exhaust_output_accel = exhaust_accel_4;
+        exhaust_output_rank = exhaust_4_rank;
+        break;
+      case 5:
+        exhaust_output_nitro = exhaust_nitro_5;
+        exhaust_output_accel = exhaust_accel_5;
+        exhaust_output_rank = exhaust_5_rank;
+        break;
+    }
+
+    total_accel = acceleration_stock + accel_output + drivetrain_output_accel + exhaust_output_accel;
+    total_speed = top_speed_stock + speed_output + tires_output_speed + drivetrain_output_speed;
+    total_handling = handling_stock + handling_output + tires_output_handling + suspension_output_handling;
+    total_nitro = nitro_stock + nitro_output + suspension_output_nitro + exhaust_output_nitro;
+    total_rank = rank_stock + accel_output_rank + speed_output_rank + handling_output_rank + nitro_output_rank + tires_output_rank + suspension_output_rank + drivetrain_output_rank + exhaust_output_rank;
+
+  }
+  
+}
