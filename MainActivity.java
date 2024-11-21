@@ -1,5 +1,4 @@
 //R8 e-tron Special Edition
-//Will need to add rank differences per upgrade later
 import java.util.Scanner;
 
 class Main {
