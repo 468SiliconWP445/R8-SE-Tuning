@@ -1,3 +1,5 @@
+![Logo](https://raw.githubusercontent.com/468SiliconWP445/R8-SE-Tuning/refs/heads/main/logo.png)
+
 # **R8 SE Tuning Calculator** 
 
 In a nutshell:
