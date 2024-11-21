@@ -439,6 +439,12 @@ class Main {
     total_nitro = nitro_stock + nitro_output + suspension_output_nitro + exhaust_output_nitro;
     total_rank = rank_stock + accel_output_rank + speed_output_rank + handling_output_rank + nitro_output_rank + tires_output_rank + suspension_output_rank + drivetrain_output_rank + exhaust_output_rank;
 
+    System.out.println("Acceleration: " + total_accel);
+    System.out.println("Top Speed: " + total_speed);
+    System.out.println("Handling: " + total_handling);
+    System.out.println("Nitro: " + total_nitro);
+    System.out.println("Rank: " + total_rank);
+
   }
   
 }
