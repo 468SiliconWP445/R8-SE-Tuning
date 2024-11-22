@@ -28,7 +28,7 @@ A Java project designed to calculate the performance metrics of an R8 SE Tune. T
 ---
 
 ### **Requirements**
-- Java Development Kit (JDK) 8 or higher (or equivalent). If you use the compiled .class file, you need JDK 23 or higher (or equivalent).
+- Java Development Kit (JDK) 8 or higher (or equivalent).
 
 ## **Disclaimer**
 - Any trademarked names are used solely for the purposes of identification. Use of these names does NOT imply any endorsement whatsoever.
