@@ -1,5 +1,6 @@
 package com.a604958692.r8setuning;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -33,36 +34,36 @@ public class Controller {
         double exhaust_nitro_1, exhaust_nitro_2, exhaust_nitro_3, exhaust_nitro_4, exhaust_nitro_5;
         double exhaust_accel_1, exhaust_accel_2, exhaust_accel_3, exhaust_accel_4, exhaust_accel_5;
 
-        int acceleration_1_rank, acceleration_2_rank, acceleration_3_rank, acceleration_4_rank, acceleration_5_rank;
-        int top_speed_1_rank, top_speed_2_rank, top_speed_3_rank, top_speed_4_rank, top_speed_5_rank;
-        int handling_1_rank, handling_2_rank, handling_3_rank, handling_4_rank, handling_5_rank;
-        int nitro_1_rank, nitro_2_rank, nitro_3_rank, nitro_4_rank, nitro_5_rank;
-        int tires_1_rank, tires_2_rank, tires_3_rank, tires_4_rank, tires_5_rank;
-        int suspension_1_rank, suspension_2_rank, suspension_3_rank, suspension_4_rank, suspension_5_rank;
-        int drivetrain_1_rank, drivetrain_2_rank, drivetrain_3_rank, drivetrain_4_rank, drivetrain_5_rank;
-        int exhaust_1_rank, exhaust_2_rank, exhaust_3_rank, exhaust_4_rank, exhaust_5_rank;
+        double acceleration_1_rank, acceleration_2_rank, acceleration_3_rank, acceleration_4_rank, acceleration_5_rank;
+        double top_speed_1_rank, top_speed_2_rank, top_speed_3_rank, top_speed_4_rank, top_speed_5_rank;
+        double handling_1_rank, handling_2_rank, handling_3_rank, handling_4_rank, handling_5_rank;
+        double nitro_1_rank, nitro_2_rank, nitro_3_rank, nitro_4_rank, nitro_5_rank;
+        double tires_1_rank, tires_2_rank, tires_3_rank, tires_4_rank, tires_5_rank;
+        double suspension_1_rank, suspension_2_rank, suspension_3_rank, suspension_4_rank, suspension_5_rank;
+        double drivetrain_1_rank, drivetrain_2_rank, drivetrain_3_rank, drivetrain_4_rank, drivetrain_5_rank;
+        double exhaust_1_rank, exhaust_2_rank, exhaust_3_rank, exhaust_4_rank, exhaust_5_rank;
 
         int accel_level = 0, speed_level = 0, handling_level = 0, nitro_level = 0;
         int tires_level = 0, suspension_level = 0, drivetrain_level = 0, exhaust_level = 0;
 
         double accel_output, speed_output, handling_output, nitro_output;
-        int accel_output_rank, speed_output_rank, handling_output_rank, nitro_output_rank;
+        double accel_output_rank, speed_output_rank, handling_output_rank, nitro_output_rank;
 
         double tires_output_speed, tires_output_handling;
         double suspension_output_nitro, suspension_output_handling;
         double drivetrain_output_speed, drivetrain_output_accel;
         double exhaust_output_nitro, exhaust_output_accel;
 
-        int tires_output_rank, suspension_output_rank, drivetrain_output_rank, exhaust_output_rank;
+        double tires_output_rank, suspension_output_rank, drivetrain_output_rank, exhaust_output_rank;
 
         double total_accel, total_speed, total_handling, total_nitro;
-        int total_rank;
+        double total_rank;
 
         acceleration_1 = -0.17d; //3.92
         acceleration_2 = -0.39d; //3.70
         acceleration_3 = -0.67d; //3.42
-        acceleration_4 = -1.01d; //3.08
-        acceleration_5 = -1.32d; //2.77
+        acceleration_4 = -0.99d; //3.10
+        acceleration_5 = -1.31d; //2.78
 
         top_speed_1 = 16.8d; //228.0
         top_speed_2 = 39.0d; //250.2
@@ -98,7 +99,7 @@ public class Controller {
         suspension_nitro_2 = 1.4d; //30.0
         suspension_nitro_3 = 2.4d; //31.0
         suspension_nitro_4 = 3.5d; //32.1
-        suspension_nitro_5 = 4.8d; //33.4
+        suspension_nitro_5 = 4.9d; //33.5
 
         suspension_handling_1 = 0.002d; //1.207
         suspension_handling_2 = 0.005d; //1.210
@@ -122,7 +123,7 @@ public class Controller {
         exhaust_nitro_2 = 1.4d; //30.0
         exhaust_nitro_3 = 2.4d; //31.0
         exhaust_nitro_4 = 3.5d; //32.1
-        exhaust_nitro_5 = 4.8d; //33.4
+        exhaust_nitro_5 = 4.9d; //33.5
 
         exhaust_accel_1 = -0.06d; //4.03
         exhaust_accel_2 = -0.12d; //3.97
@@ -134,7 +135,7 @@ public class Controller {
         acceleration_2_rank = 22; //481
         acceleration_3_rank = 40; //499
         acceleration_4_rank = 63; //522
-        acceleration_5_rank = 90; //549
+        acceleration_5_rank = 89.5; //549
 
         top_speed_1_rank = 45; //504
         top_speed_2_rank = 112; //571
@@ -158,25 +159,25 @@ public class Controller {
         tires_2_rank = 30; //489
         tires_3_rank = 51; //510
         tires_4_rank = 74; //533
-        tires_5_rank = 101; //560
+        tires_5_rank = 101.5d; //560
 
         suspension_1_rank = 9; //468
         suspension_2_rank = 20; //479
         suspension_3_rank = 34; //493
         suspension_4_rank = 50; //509
-        suspension_5_rank = 68; //527
+        suspension_5_rank = 67.5; //527
 
         drivetrain_1_rank = 14; //473
         drivetrain_2_rank = 30; //489
         drivetrain_3_rank = 51; //510
         drivetrain_4_rank = 74; //533
-        drivetrain_5_rank = 101; //560
+        drivetrain_5_rank = 101.5d; //560
 
         exhaust_1_rank = 9; //468
         exhaust_2_rank = 20; //479
         exhaust_3_rank = 34; //493
         exhaust_4_rank = 50; //509
-        exhaust_5_rank = 68; //527
+        exhaust_5_rank = 67.5; //527
 
         try {
             accel_level = Integer.parseInt(accel_level_input.getText());
@@ -467,22 +468,26 @@ public class Controller {
             total_accel = acceleration_stock + accel_output + drivetrain_output_accel + exhaust_output_accel;
             String total_accel_rounded = String.format("%.2f", total_accel);
             total_speed = top_speed_stock + speed_output + tires_output_speed + drivetrain_output_speed;
+            String total_speed_rounded = String.format("%.1f", total_speed);
             total_handling = handling_stock + handling_output + tires_output_handling + suspension_output_handling;
             String total_handling_rounded = String.format("%.3f", total_handling);
             total_nitro = nitro_stock + nitro_output + suspension_output_nitro + exhaust_output_nitro;
+            String total_nitro_rounded = String.format("%.1f", total_nitro);
             total_rank = rank_stock + accel_output_rank + speed_output_rank + handling_output_rank + nitro_output_rank + tires_output_rank + suspension_output_rank + drivetrain_output_rank + exhaust_output_rank;
+            int total_rank_rounded = (int) total_rank;
             double max_speed;
             max_speed = total_speed + total_nitro;
+            String max_speed_rounded = String.format("%.1f", max_speed);
             double speed_rank;
             speed_rank = max_speed / total_rank;
 
             resultLabel.setText(
                     "Acceleration: " + total_accel_rounded + "\n" +
-                            "Top Speed: " + total_speed + "\n" +
+                            "Top Speed: " + total_speed_rounded + "\n" +
                             "Handling: " + total_handling_rounded + "\n" +
-                            "Nitro: " + total_nitro + "\n" +
-                            "Total Speed: " + max_speed + "\n" +
-                            "Rank: " + total_rank + "\n" +
+                            "Nitro: " + total_nitro_rounded + "\n" +
+                            "Total Speed: " + max_speed_rounded + "\n" +
+                            "Rank: " + total_rank_rounded + "\n" +
                             "Speed / Rank: " + speed_rank + "\n"
             );
         } catch (NumberFormatException e) {
@@ -500,5 +505,10 @@ public class Controller {
         suspension_level_input.setText("");
         drivetrain_level_input.setText("");
         exhaust_level_input.setText("");
+    }
+
+    @FXML
+    private void exit() {
+        Platform.exit();
     }
 }
