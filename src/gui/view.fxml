@@ -34,6 +34,8 @@
 
     <Button text="Reset" onAction="#reset"/>
 
+    <Button text="Close R8-SE Tuning" onAction="#exit"/>
+
     <Label fx:id="resultLabel" text="Car Statistics:"/>
 
 </VBox>
