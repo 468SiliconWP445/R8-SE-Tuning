@@ -34,3 +34,4 @@ A Java project designed to calculate the performance metrics of an R8 SE Tune. T
 
 ## **Disclaimer**
 - All trademarked names and brands mentioned in this project are the property of their respective owners. They are used solely for identification and reference purposes. The use of these names does not imply any affiliation with or endorsement by the trademark holders.
+- This Simulator is currently getting updated to improve accuracy. As such, tuning statistics may be every so slightly inaccurate occasionally, though usually by an extremely small amount if at all.
