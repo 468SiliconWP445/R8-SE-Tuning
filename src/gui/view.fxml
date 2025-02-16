@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.a604958692.r8setuning.Controller">
+
+    <Label text="Enter the Acceleration Level:"/>
+    <TextField fx:id="accel_level_input"/>
+
+    <Label text="Enter the Top Speed Level:"/>
+    <TextField fx:id="speed_level_input"/>
+
+    <Label text="Enter the Handling Level:"/>
+    <TextField fx:id="handling_level_input"/>
+
+    <Label text="Enter the Nitro Level:"/>
+    <TextField fx:id="nitro_level_input"/>
+
+    <Label text="Enter the Tires Level:"/>
+    <TextField fx:id="tires_level_input"/>
+
+    <Label text="Enter the Suspension Level:"/>
+    <TextField fx:id="suspension_level_input"/>
+
+    <Label text="Enter the Drivetrain Level:"/>
+    <TextField fx:id="drivetrain_level_input"/>
+
+    <Label text="Enter the Exhaust Level:"/>
+    <TextField fx:id="exhaust_level_input"/>
+
+    <Button text="Calculate" onAction="#calculate"/>
+
+    <Button text="Reset" onAction="#reset"/>
+
+    <Label fx:id="resultLabel" text="Car Statistics:"/>
+
+</VBox>
