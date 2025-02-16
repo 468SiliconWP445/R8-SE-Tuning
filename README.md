@@ -5,7 +5,7 @@
 
 In a nutshell:
 
-A Java project designed to calculate the performance metrics of an R8 SE Tune. The program takes the upgrade levels of each component (acceleration, top speed, etc.) and outputs the acceleration, top speed, handling, nitro and rank of what the R8 SE would have been in pre-v4.1 Asphalt 8 (due to rounding errors some values can be 1 off (or 0.1 or 0.01 or 0.001; essentially the smallest unit of the statistic in question, e.g. 0500 5050 produces a rank of 1110 when in reality it is 1111).
+A Java project designed to calculate the performance metrics of an R8 SE Tune. The program takes the upgrade levels of each component (acceleration, top speed, etc.) and outputs the acceleration, top speed, handling, nitro and rank of what the R8 SE would have been in pre-v4.1 Asphalt 8.
 
 ---
 
