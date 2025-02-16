@@ -22,7 +22,7 @@ A Java project designed to calculate the performance metrics of an R8 SE Tune. T
 
 ## **How It Works**
 1. **User Input**: The user selects upgrade levels for various upgrades (e.g. Top Speed) through a command-line interface, or, a graphical user interface.
-2. NOTE: if the user enters a value that is a valid number, but not between 0 and 5, the program assumes the value is 0.
+2. ***NOTE***: if the user enters a value that is a valid number, but not between 0 and 5, the program assumes the value is 0.
 3. **Performance Metrics Calculation**: 
    - The effect that each upgrade has on the relevant statistics (e.g. Tires upgrades speed and handling).
 4. **Output**: The stats for the tune are displayed to the user.
