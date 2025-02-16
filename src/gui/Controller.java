@@ -465,8 +465,10 @@ public class Controller {
             }
 
             total_accel = acceleration_stock + accel_output + drivetrain_output_accel + exhaust_output_accel;
+            String total_accel_rounded = String.format("%.2f", total_accel);
             total_speed = top_speed_stock + speed_output + tires_output_speed + drivetrain_output_speed;
             total_handling = handling_stock + handling_output + tires_output_handling + suspension_output_handling;
+            String total_handling_rounded = String.format("%.3f", total_handling);
             total_nitro = nitro_stock + nitro_output + suspension_output_nitro + exhaust_output_nitro;
             total_rank = rank_stock + accel_output_rank + speed_output_rank + handling_output_rank + nitro_output_rank + tires_output_rank + suspension_output_rank + drivetrain_output_rank + exhaust_output_rank;
             double max_speed;
@@ -475,9 +477,9 @@ public class Controller {
             speed_rank = max_speed / total_rank;
 
             resultLabel.setText(
-                    "Acceleration: " + total_accel + "\n" +
+                    "Acceleration: " + total_accel_rounded + "\n" +
                             "Top Speed: " + total_speed + "\n" +
-                            "Handling: " + total_handling + "\n" +
+                            "Handling: " + total_handling_rounded + "\n" +
                             "Nitro: " + total_nitro + "\n" +
                             "Total Speed: " + max_speed + "\n" +
                             "Rank: " + total_rank + "\n" +
